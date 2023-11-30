@@ -1,0 +1,51 @@
+{% load static %}
+{% for catig in category %}
+
+<section class="product_section ">
+    
+    <div class="container">
+        <div class="product_container">
+            <div class="box">
+                <div style="
+                max-width: 250px;
+                margin: 50px auto -25px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                ">
+        {% for prod in product %}
+       
+        <div style="border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;">
+            <img style="
+                max-width: 100%;
+                height: auto;
+                display: block;" src="/media/{{prod.image}}" alt="Product 1">
+            <div style="padding: 10px;">
+                <p>{{prod.name}}, {{prod.price}}$
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+        
+       
+        
+            </div>
+            <div class="btn-box">
+                <a href="">
+                  See more details
+                </a>
+            </div>
+            
+
+            
+        </div>{% endfor %}
+
+    </div>
+   
+</section>
